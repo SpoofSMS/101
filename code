@@ -1,0 +1,378 @@
+file "form.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EasyTrackr - Akkord Kalkulator</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+    <h1>Akkord Kalkulator</h1>
+    
+    <form method="post" action="generate-pdf.php">
+        
+        <label for="name">Navn</label>
+        <input type="text" name="name" id="name">
+        
+        <label for="dato">Dato</label>
+        <input type="date" name="dato" id="dato">
+        
+        <label for="kunde">Prosjektnummer</label>
+        <input type="text" name="kunde" id="kunde">
+
+        <label for="arbeidere">Delaktige Arbeidere</label>
+        <input type="text" name="arbeidere" id="arbeidere">
+
+        <label for="arbeidernr">Antall Arbeidere</label>
+        <input type="number" name="arbeidernr" id="arbeidernr">
+
+        <label for="areal">Areal</label>
+        <input type="number" name="areal" id="areal">
+
+        <label for="timer">Timer Totalt</label>
+        <input type="number" name="timer" id="timer">
+
+        <div class="mb-3">
+            <label class="form-label">Utført</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="15" id="avtrekk" name="avtrekk">
+                <label class="form-check-label" for="avtrekk">Avtrekk</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="20" id="skuring" name="skuring">
+                <label class="form-check-label" for="skuring">Skuring</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="27" id="glatting" name="glatting">
+                <label class="form-check-label" for="glatting">Glatting</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="5" id="plastikk" name="plastikk">
+                <label class="form-check-label" for="plastikk">Plastikk</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="2" id="sikatop" name="sikatop">
+                <label class="form-check-label" for="sikatop">Sikatop</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="4" id="mdp" name="mdp">
+                <label class="form-check-label" for="mdp">MDP</label>
+            </div>
+        </div>
+
+        <button type="submit">Regn ut</button>
+    </form>
+</body>
+</html>
+
+file "index.html"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Your Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Hjem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/form.html">Akkord Kalkulator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tjenester.html">Tjenester</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to Our Landing Page</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-light btn-lg">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 3</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h2 class="text-center mb-4">Kontakt</h2>
+                    <form method="post" action="contact.php">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Navn</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Epost</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Melding</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 <a href="https://easytrackr.com">EasyTrackr. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+File "generate-pdf.php"
+<?php
+
+require __DIR__ . "/vendor/autoload.php";
+
+use Dompdf\Dompdf;
+use Dompdf\Options;
+
+$name = $_POST["name"];
+$dato = $_POST["dato"];
+$kunde = $_POST["kunde"];
+$arbeidere = $_POST["arbeidere"];
+$areal = $_POST["areal"];
+$timer = $_POST["timer"];
+
+$checkboxValues = [
+    $_POST["avtrekk"],
+    $_POST["skuring"],
+    $_POST["glatting"],
+    $_POST["plastikk"],
+    $_POST["sikatop"],
+    $_POST["mdp"]
+];
+
+// Calculate the first result: Checkbox total multiplied by Areal
+$checkboxTotal = array_sum($checkboxValues);
+$result1 = $checkboxTotal * $areal;
+
+// Calculate the second result: Result1 divided by Antall Arbeidere
+$arbeidernr = $_POST["arbeidernr"];
+$result2 = $result1 / $arbeidernr;
+
+// Calculate the third result: Checkbox total multiplied by Areal divided by Timer totalt
+$result3 = ($checkboxTotal * $areal) / $timer;
+
+/**
+ * Set the Dompdf options
+ */
+$options = new Options();
+$options->setChroot(__DIR__);
+$options->setIsRemoteEnabled(true);
+
+$dompdf = new Dompdf($options);
+
+/**
+ * Set the paper size and orientation
+ */
+$dompdf->setPaper("A4", "landscape");
+
+/**
+ * Load the HTML and replace placeholders with values from the form
+ */
+$html = file_get_contents("template.html");
+
+$html = str_replace(
+    [
+        "{{ name }}",
+        "{{ dato }}",
+        "{{ kunde }}",
+        "{{ arbeidere }}",
+        "{{ areal }}",
+        "{{ timer }}",
+        "{{ totalt }}",
+        "{{ timesats }}",
+        "{{ takkord }}"
+    ],
+    [
+        $name,
+        $dato,
+        $kunde,
+        $arbeidere,
+        $areal,
+        $timer,
+        $result1,
+        $result3,
+        $result2
+    ],
+    $html
+);
+
+$dompdf->loadHtml($html);
+
+/**
+ * Render the PDF
+ */
+$dompdf->render();
+
+/**
+ * Send the PDF to the browser
+ */
+$dompdf->stream("invoice.pdf", ["Attachment" => 0]);
+
+file "template.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/gutenberg-css@0.6">
+    <style>
+        table {
+            width: 100%;
+        }
+        footer {
+            text-align: center;
+            font-style: bold;
+        }
+        h2 {
+            color: black;
+            text-align: center;
+            font-style: bold;
+            font-style: italic;
+        }
+        h3 {
+            color: black;
+            font-style: bold;
+            font-style: italic;
+            font-style: inherit;
+            text-align: center;
+        }
+        footer {
+            font-size: large;
+            font-style: italic;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="logo.png">
+    
+    <h2>Akkordgrunnlag</h2>
+    <div></div>
+    <h3>Navn: {{ name }}</h3>
+    <br></br>
+    <table>
+        <thead>
+            <tr>
+                <th>Dato: {{ dato }}</th>
+            </tr>
+        </thead>
+         <thead>
+            <tr>
+            <th>Kunde: {{ kunde }}</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+            <th>Areal: {{ areal }}</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <th>Arbeidslag: {{ arbeidere }}</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <th>Totalt Timer: {{ timer }}</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <th>Akkord Per: {{ takkord }}</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <th>Timesats: {{ timesats }}</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <th>Total Akkord: {{ totalt }}</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+        </thead>
+    </table>
+    
+    <footer>
+        Hosted by <a href="https://easytrackr.com">EasyTrackr.com</a>
+    </footer>
+    
+</body>
+</html>
